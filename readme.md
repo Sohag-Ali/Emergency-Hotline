@@ -1,165 +1,104 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
+- 🌐 **Live Link** : https://sohag-ali.github.io/Emergency-Hotline/
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
 
-### 📅 No Deadline For 50 marks
+### Answer to the question No 01 :
 
-### 📅 Deadline For 30 marks: Any time after 29th August.
+getElementById targets HTML elements that have a unique id attribute.
+This searches the entire HTML document for elements with the specified class.
+querySelector returns the first element in the document that matches a given CSS selector.
+querySelectorAll returns all elements that match a given CSS selector.
 
----
+### Amswer to the question No 2 :
 
-## ✅ Main Requirements (50 Marks)
+Create a new element
+const newDiv = document.createElement('div');
+Insert a new element
+const textContent = document.createTextNode('This is new content.');
+newDiv.appendChild(textContent);
 
-### 1. Navbar
+### Answer to the question No 03 :
 
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
+When you interact with something on a webpage — say you click a button inside a box — the event doesn’t just stay with that button. Instead, the browser lets the event “bubble up” through the layers of elements that contain it.
 
----
+step 1 : You interact with an element
+ you click a button inside a div.
 
-### 2. Hero Section
+step 2 :The event first happens on the target element
+The browser says: “Okay, the button was clicked” and fires any event listeners attached directly to that button.
 
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
+step 3 :Then it moves upward to the parent
+After finishing with the button, the same event automatically moves up to the parent container (the div).
+If the parent has an event listener, that runs too.
 
----
+step 4 : It keeps going up the chain
+From parent → grandparent → body → document → window.
+Each ancestor has the chance to “react” to the same event.
 
-### 2. Main Section
+step5 : Unless you stop it
+If you don’t want the event to keep going up, you call.
 
-This Section will have layout as figma
+<div id="parent">
+  <button id="child">Click Me</button>
+</div>
 
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
+child.addEventListener("click", () => {
+  console.log("Button says: I was clicked!");
+});
 
-### Emergency Hotline Section
+parent.addEventListener("click", () => {
+  console.log("Parent says: I noticed the click too!");
+});
 
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
+document.body.addEventListener("click", () => {
+  console.log("Body says: I also caught that click!");
+});
 
-### History Section
+### Answer to the question On 4 :
 
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
+Event Delegation is a JavaScript technique where instead of attaching an event listener to every single child element, you attach just one listener to a common parent element.
 
----
+That parent uses the event’s bubbling behavior to “catch” clicks (or other events) from its children.
+Then, you check which child was actually clicked using event.target.
 
-### 3. Responsiveness (5 Marks)
+1. Performance-Friendly: Imagine you have 100 list items. Instead of adding 100 event listeners, you add just one to the parent.Less memory used, faster performance.
 
-- Website should be fully **responsive for mobile devices** (implementation up to you)
+2. Works for Dynamic Elements: If new child elements are added later (like adding a new list item), you don’t need to add new listeners.
+The parent listener will still catch them.
 
----
+3. Cleaner Code: You manage events in one place instead of spreading listeners everywhere.
 
-## Functionalities
 
-### 4. Heart Icons
+### Answer to the question No 5 :
 
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
+1. preventDefault() : Meaning: Tells the browser Don’t do your usual job for this event.It stops the default action of the element.The event will still bubble up to parent elements unless you also stop it.
 
----
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault(); 
+  console.log("Form submission prevented");
+});
 
-### 5. Call Buttons
 
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
+2. stopPropagation():Meaning: Tells the browser Don’t pass this event to any parent elements. It stops the event flow (bubbling or capturing).The default action still happens unless you also call preventDefault().
 
----
+child.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  console.log("Child clicked only");
+});
 
-### 5. Call History Section
+parent.addEventListener("click", () => {
+  console.log("Parent clicked");
+});
 
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
 
----
 
-## Create Readme
 
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
 
-### 6. Answer the following questions clearly:
-
-1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-2. How do you **create and insert a new element into the DOM**?
-3. What is **Event Bubbling** and how does it work?
-4. What is **Event Delegation** in JavaScript? Why is it useful?
-5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
----
-
-## 🧪 Challenges Part (10 Marks)
-
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
-
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
-
-💡Hint: Search Google with that below question
-
-```bash
-How to get current local time in js
-```
-
----
 
 ## ⚙️ Technology Stack
 
 - HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
+-  Tailwind CSS , DaisyUI
+- JavaScript ( Vanilla only)
 
----
 
-## 📌 Rules
 
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
