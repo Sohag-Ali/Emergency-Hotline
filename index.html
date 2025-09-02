@@ -41,12 +41,12 @@
 
       <div class="flex items-end sm:flex items-center gap-2">
         <div class="inline-flex items-center gap-2 bg-green-50 text-black font-bold text-sm px-3 py-1 rounded-full border border-green-100">
-           <p>0</p>  
+           <p id="heart-count">0</p>  
            <img src="./assets/heart.png" alt="" class="h-4 w-4 ">
         </div>
 
         <div class="inline-flex items-center gap-2 bg-green-50 text-black font-bold text-sm px-3 py-1 rounded-full border border-green-100">
-           <p>100</p>  
+           <p id="coin-count">100</p>  
            <img src="./assets/coin.png" alt="" class="h-4 w-4 ">
         </div>
 
@@ -59,7 +59,7 @@
 
   <!-- Hero Banner -->
   <section class="relative">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-emerald-800 to-emerald-700"></div>
+    <div class="absolute inset-0 -z-10  bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-900"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
       <div class="flex flex-col items-center text-center">
         <img src="./assets/logo-dark.png" alt="" class="h-16 w-16 rounded-full ring-4 ring-emerald-600/40 mb-3">
@@ -83,16 +83,16 @@
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart "></i></button>
+            <button id="" class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart "></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">জাতীয় জরুরি সেবা</h3>
+                <h3 class="font-semibold name">জাতীয় জরুরি সেবা</h3>
                 <p class="text-xs text-slate-500">National Emergency</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">999</p>
+            <p class="text-2xl font-bold number">999</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">সার্বক্ষণিক</span>
             </div>
@@ -112,18 +112,18 @@
               <img src="./assets/police.png" class="h-9 w-9 p-1 rounded-xl ring-1 ring-slate-200 bg-blue-50" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button id="" class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
-          <div class="mt-1">
-                <h3 class="font-semibold">পুলিশ</h3>
+          <div class="mt-1 ">
+                <h3 class="font-semibold name">পুলিশ</h3>
                 <p class="text-xs text-slate-500">Police</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">999</p>
+            <p class="number text-2xl font-bold ">999</p>
             <div class="mt-1 flex items-center gap-2">
-              <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">পুলিশ</span>
+              <span class=" text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">পুলিশ</span>
             </div>
           </div>
           <div class="mt-4 grid grid-cols-2 gap-3">
@@ -141,16 +141,16 @@
               <img src="./assets/fire-service.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">ফায়ার সার্ভিস</h3>
+                <h3 class="font-semibold name">ফায়ার সার্ভিস</h3>
                 <p class="text-xs text-slate-500">Fire Service</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">999</p>
+            <p class="text-2xl font-bold number">999</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">ফায়ার</span>
             </div>
@@ -170,16 +170,16 @@
               <img src="./assets/ambulance.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">অ্যাম্বুলেন্স</h3>
+                <h3 class="font-semibold name">অ্যাম্বুলেন্স</h3>
                 <p class="text-xs text-slate-500">Ambulance</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">1994-999999</p>
+            <p class="text-2xl font-bold number">1994-999999</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">স্বাস্থ্য</span>
             </div>
@@ -199,16 +199,16 @@
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">নারী ও শিশু সহায়তা</h3>
+                <h3 class="font-semibold name">নারী ও শিশু সহায়তা</h3>
                 <p class="text-xs text-slate-500">Women & Child Helpline</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">109</p>
+            <p class="text-2xl font-bold number ">109</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">সহায়তা</span>
             </div>
@@ -228,16 +228,16 @@
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">দুদক</h3>
+                <h3 class="font-semibold name">দুদক</h3>
                 <p class="text-xs text-slate-500">Anti-Corruption</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">106</p>
+            <p class="text-2xl font-bold number">106</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">সরকারি</span>
             </div>
@@ -257,16 +257,16 @@
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">বিদ্যুৎ বিভ্রাট</h3>
+                <h3 class="font-semibold name">বিদ্যুৎ বিভ্রাট</h3>
                 <p class="text-xs text-slate-500">Electricity Outage</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">16216</p>
+            <p class="text-2xl font-bold number">16216</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">বিদ্যুৎ</span>
             </div>
@@ -286,16 +286,16 @@
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">ব্র্যাক</h3>
+                <h3 class="font-semibold name">ব্র্যাক</h3>
                 <p class="text-xs text-slate-500">Brac</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">16445</p>
+            <p class="text-2xl font-bold number">16445</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">এনজিও</span>
             </div>
@@ -315,16 +315,16 @@
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
           </div>
 
           <div class="mt-1">
-                <h3 class="font-semibold">বাংলাদেশ রেলওয়ে</h3>
+                <h3 class="font-semibold name">বাংলাদেশ রেলওয়ে</h3>
                 <p class="text-xs text-slate-500">Bangladesh Railway</p>
               </div>
 
           <div class="mt-3">
-            <p class="text-2xl font-bold ">163</p>
+            <p class="text-2xl font-bold number">163</p>
             <div class="mt-1 flex items-center gap-2">
               <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200"">পরিবহন</span>
             </div>
@@ -350,9 +350,9 @@
             </div>
             <button id="clearHistory" class="ml-2 inline-flex items-center gap-2 bg-[#00A63E] text-[#FFFFFF] text-xs px-4 py-1.5 rounded-full  hover:bg-red-400">Clear</button>
           </div>
-          <ul id="historyList" class="max-h-[520px] overflow-auto divide-y divide-slate-100">
-            <!-- history items injected here -->
-          </ul>
+          <div id="historyList" class="max-h-[520px] overflow-auto flex flex-col gap-2 p-2">
+  <!-- history items injected here -->
+</div>
         </div>
       </aside>
     </div>
@@ -365,6 +365,7 @@
   <script>
    
   </script>
+  <script src="./script.js"></script>
 </body>
 </html>
 
