@@ -41,7 +41,7 @@ for (let i = 0; i < callButtons.length; i++) {
     // coint cheeck
     const totalCoin = parseInt(document.getElementById("coin-count").innerText);
     if (totalCoin < 20) {
-      alert("Insufficient Balance 😊");
+      alert("Insufficient Balance 😊 💸🫰");
       return;
     }
     const newAmount = totalCoin - 20;
@@ -51,8 +51,8 @@ for (let i = 0; i < callButtons.length; i++) {
     const serviceNumber = numbers[i].innerText;
 
     // Massage show.....
-    alert(`Calling: ${serviceName}
-           Number: ${serviceNumber}`);
+    alert(`📞Calling to the : ${serviceName}
+    Number: ${serviceNumber}`);
 
   // ---- Call History Added----
 const div = document.createElement("div");
@@ -102,7 +102,7 @@ for (let i = 0; i < copy.length; i++) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(serviceNumber)
         .then(() => {
-          alert("Copied: " + serviceNumber); 
+          alert("Sucessfully Copied: " + serviceNumber); 
         })
         .catch(err => {
           console.error("Clipboard copy failed", err);
@@ -115,7 +115,7 @@ for (let i = 0; i < copy.length; i++) {
       ta.select();
       document.execCommand("copy");
       document.body.removeChild(ta);
-      alert("Copied: " + serviceNumber);
+      alert("Sucessfully Copied: " + serviceNumber);
     }
   });
 }
