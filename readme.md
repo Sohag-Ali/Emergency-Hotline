@@ -90,10 +90,6 @@ parent.addEventListener("click", () => {
 });
 
 
-
-
-
-
 ## ⚙️ Technology Stack
 
 - HTML
