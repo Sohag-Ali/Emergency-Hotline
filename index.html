@@ -7,26 +7,39 @@
   <meta name="description" content="Government Emergency Services at Your Fingertip — Hotline Directory (Bangla + English).">
   <link rel="icon" href="assets/bd-emblem.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
   <style>
     html { scroll-behavior: smooth }
+
+    .hind-madurai {
+  font-family: "Hind Madurai", sans-serif;
+  font-style: normal;
+}
   </style>
 
 
 </head>
-<body class="bg-[#F5FFF6] text-slate-800">
+<body class="bg-[#F5FFF6] text-slate-800 hind-madurai ">
   <!-- Top Bar -->
   <header class="w-full  bg-white/80 ">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
 
       <div class="flex items-center gap-3">
         <img src="./assets/logo.png" alt="" class="h-9 w-9 rounded-full ">
         <div class="Logo-title">
-          <p class="font-bold text-[#006747]">Emergency <br> <span>Service</span></p>
+          <p class="font-black text-[#006747]">Emergency <br>Service</p>
         </div>
       </div>
 
-      <div class="hidden sm:flex items-center gap-2">
+      <div class="flex items-end sm:flex items-center gap-2">
         <div class="inline-flex items-center gap-2 bg-green-50 text-black font-bold text-sm px-3 py-1 rounded-full border border-green-100">
            <p>0</p>  
            <img src="./assets/heart.png" alt="" class="h-4 w-4 ">
@@ -37,7 +50,7 @@
            <img src="./assets/coin.png" alt="" class="h-4 w-4 ">
         </div>
 
-        <button class="ml-2 inline-flex items-center gap-2 bg-[#00A63E] text-[#FFFFFF] text-xs px-4 py-1.5 rounded-full  hover:bg-red-400">
+        <button class=" ml-2 inline-flex items-center gap-2 bg-[#00A63E] text-[#FFFFFF] text-xs px-4 py-1.5 rounded-full  hover:bg-red-400">
           2 Copy
         </button>
       </div>
@@ -70,7 +83,7 @@
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
-            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart"></i></button>
+            <button class="p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart "></i></button>
           </div>
 
           <div class="mt-1">
@@ -332,7 +345,7 @@
         <div class="rounded-2xl bg-white border border-slate-200 shadow-card">
           <div class="flex items-center justify-between px-4 py-3 border-b border-slate-200">
             <div class="flex items-center gap-2 text-slate-700">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8a1 1 0 011 1v3.382l1.895 1.263a1 1 0 11-1.11 1.664l-2.4-1.6A1 1 0 0111 13V9a1 1 0 011-1z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM4 12a8 8 0 1016 0A8 8 0 004 12z"/></svg>
+              <i class="fa-regular fa-clock"></i>
               <h3 class="font-semibold">Call History</h3>
             </div>
             <button id="clearHistory" class="ml-2 inline-flex items-center gap-2 bg-[#00A63E] text-[#FFFFFF] text-xs px-4 py-1.5 rounded-full  hover:bg-red-400">Clear</button>
@@ -350,52 +363,8 @@
   </footer>
 
   <script>
-    // Utils
-    const historyList = document.getElementById('historyList');
-    const clearBtn = document.getElementById('clearHistory');
-    const addHistory = (name, number) => {
-      const t = new Date();
-      const time = t.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-      const li = document.createElement('li');
-      li.className = "px-4 py-3 flex items-center justify-between";
-      li.innerHTML = `<div><p class="text-sm font-medium">${name}</p><p class="text-xs text-slate-500">${number}</p></div><span class="text-xs text-slate-500">${time}</span>`;
-      historyList.prepend(li);
-    };
-    // Copy buttons
-    document.querySelectorAll('.btn-copy').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const number = btn.dataset.number;
-        const name = btn.dataset.name || 'Unknown';
-        try {
-          await navigator.clipboard.writeText(number);
-          btn.textContent = '✓ Copied';
-          setTimeout(() => btn.textContent = '⧉ Copy', 1500);
-        } catch (_) {}
-        addHistory(name, number);
-      });
-    });
-    // Call buttons
-    document.querySelectorAll('.btn-call').forEach(a => {
-      a.addEventListener('click', () => {
-        addHistory(a.dataset.name || 'Unknown', a.dataset.number || '');
-      });
-    });
-    // Clear
-    clearBtn?.addEventListener('click', () => {
-      historyList.innerHTML = '';
-    });
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+   
   </script>
 </body>
 </html>
 
-
-
-echo "# Emergency-Hotline" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Sohag-Ali/Emergency-Hotline.git
-git push -u origin main
