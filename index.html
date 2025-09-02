@@ -1,21 +1,26 @@
 <!doctype html>
 <html lang="bn">
+
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>জরুরি সেবা ডিরেক্টরি • Emergency Service</title>
+  <title>Emergency Service</title>
   <meta name="description" content="Government Emergency Services at Your Fingertip — Hotline Directory (Bangla + English).">
-  <link rel="icon" href="assets/bd-emblem.png">
+  <link rel="icon" href="./assets/emergency.png">
+
+  <!-- ...........Font Awesome............ -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
+  <!-- ........Google Font Hind Madurai........... -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-
+<!-- ........Taliwind Css ......... -->
  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-
+<!-- ... Font style and behaviour....... -->
   <style>
     html { scroll-behavior: smooth }
 
@@ -27,8 +32,12 @@
 
 
 </head>
+
+
 <body class="bg-[#F5FFF6] text-slate-800 hind-madurai ">
-  <!-- Top Bar -->
+
+  <!-- .............Top Bar.............. -->
+
   <header class="w-full  bg-white/80 ">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
 
@@ -51,13 +60,15 @@
         </div>
 
         <button class=" ml-2 inline-flex items-center gap-2 bg-[#00A63E] text-[#FFFFFF] text-xs px-4 py-1.5 rounded-full  hover:bg-red-400">
-          2 Copy
+          <span id="copy-count">0</span>
+          Copy
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Banner -->
+  <!-- ..... Banner section .......... -->
+
   <section class="relative">
     <div class="absolute inset-0 -z-10  bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-900"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
@@ -74,11 +85,11 @@
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
       <!-- Cards area -->
       <section class="lg:col-span-3 grid sm:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
-        <!-- Card Template (duplicate for each service) -->
+        <!-- Card Template duplicate for each service-->
        
-           <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+        <!-- ...........Emergency........ -->
+           <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md ">
           <div class="flex items-start justify-between">
-            <!-- flex items-center gap-3 -->
             <div class="">
               <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
@@ -105,9 +116,10 @@
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+        <!-- .....Police.......... -->
+        <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md ">
           <div class="flex items-start justify-between">
-            <!-- flex items-center gap-3 -->
+            
             <div class="">
               <img src="./assets/police.png" class="h-9 w-9 p-1 rounded-xl ring-1 ring-slate-200 bg-blue-50" alt="">
             </div>
@@ -134,7 +146,8 @@
           </div>
         </div>
 
-           <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+        <!-- .....Fire service......... -->
+           <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md ">
           <div class="flex items-start justify-between">
             <!-- flex items-center gap-3 -->
             <div class="">
@@ -163,7 +176,7 @@
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+        <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md ">
           <div class="flex items-start justify-between">
             <!-- flex items-center gap-3 -->
             <div class="">
@@ -192,11 +205,12 @@
           </div>
         </div>
 
-           <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+        <!-- ..........Women & Child Helpline.... -->
+           <div class="rounded-2xl bg-white border  p-6 border-slate-200  shadow-md">
           <div class="flex items-start justify-between">
-            <!-- flex items-center gap-3 -->
+            
             <div class="">
-              <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
+              <img src="./assets/WomenChildHelpline-128.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
             <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
@@ -221,11 +235,12 @@
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+          <!-- ..........Anti-Corruption.... -->
+        <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md">
           <div class="flex items-start justify-between">
-            <!-- flex items-center gap-3 -->
+            
             <div class="">
-              <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
+              <img src="./assets/AntiCorruption-128.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
             <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
@@ -250,11 +265,12 @@
           </div>
         </div>
 
-           <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+        <!-- Electricity Outage -->
+           <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md">
           <div class="flex items-start justify-between">
-            <!-- flex items-center gap-3 -->
+            
             <div class="">
-              <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
+              <img src="./assets/ElectricityOutage-128.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
             <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
@@ -279,11 +295,12 @@
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+          <!-- .......Brac.... -->
+        <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md">
           <div class="flex items-start justify-between">
             <!-- flex items-center gap-3 -->
             <div class="">
-              <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
+              <img src="./assets/brac.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
             <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
@@ -308,11 +325,12 @@
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border  p-6 border-slate-200 ">
+          <!-- ...........Bangladesh Railway......... -->
+        <div class="rounded-2xl bg-white border  p-6 border-slate-200 shadow-md">
           <div class="flex items-start justify-between">
             <!-- flex items-center gap-3 -->
             <div class="">
-              <img src="./assets/emergency.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
+              <img src="./assets/Bangladesh-Railway.png" class="h-9 w-9 p-2 rounded-xl ring-1 ring-slate-200 bg-red-100" alt="">
             </div>
             
             <button class="heart-btn p-2 rounded-full hover:bg-slate-100 text-slate-500"><i class="fa-regular fa-heart icon-heart"></i></button>
@@ -341,8 +359,8 @@
       </section>
 
       <!-- History sidebar -->
-      <aside class="lg:col-span-1">
-        <div class="rounded-2xl bg-white border border-slate-200 shadow-card">
+      <aside class="lg:col-span-1 rounded-2xl bg-white border border-slate-200 shadow-md">
+        <div class="">
           <div class="flex items-center justify-between px-4 py-3 border-b border-slate-200">
             <div class="flex items-center gap-2 text-slate-700">
               <i class="fa-regular fa-clock"></i>
@@ -350,17 +368,18 @@
             </div>
             <button id="clearHistory" class="ml-2 inline-flex items-center gap-2 bg-[#00A63E] text-[#FFFFFF] text-xs px-4 py-1.5 rounded-full  hover:bg-red-400">Clear</button>
           </div>
-          <div id="historyList" class="max-h-[520px] overflow-auto flex flex-col gap-2 p-2">
+          <div id="historyList" class="flex flex-col gap-2 p-2">
   <!-- history items injected here -->
 </div>
         </div>
       </aside>
+      
     </div>
   </main>
 
-  <footer class="py-8 text-center text-xs text-slate-500">Sohag
+  <!-- <footer class="py-8 text-center text-xs text-slate-500">Sohag
     © <span></span> Emergency Service.
-  </footer>
+  </footer> -->
 
   <script>
    
